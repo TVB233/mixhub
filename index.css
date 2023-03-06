@@ -1,0 +1,106 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#logo{
+    width: 60px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+/* 设置页面标题的样式 */
+h1 {
+    text-align: left;
+    font-size: 80px;
+    margin: 0px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 36px;
+    margin: 0px;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 设置两个部分的样式，用flexbox布局实现左右分层 */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 设置waitlist列表的样式 */
+.waitlist {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 6%;
+    margin-bottom: 100px;
+    margin-left: 5%;
+}
+
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #F3F3F3FF;
+    border: 2px solid #F3F3F3FF;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 设置轮播图容器的样式 */
+#slider {
+    position: relative;
+    height: 800px;
+    width: 800px;
+    margin: auto 0;
+    padding-right: 100px;
+}
+
+@media (max-width: 1280px) {
+    #slider {
+        position: relative;
+        height: 600px;
+        width: 600px;
+        margin: auto 0;
+        padding-right: 50px;
+    }
+}
+
+#slider img {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    height: 100%;
+}
+
+#slider img.active {
+    opacity: 1;
+}

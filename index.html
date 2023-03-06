@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiX</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="waitlist">
+        <img id="logo" src="LOGO.svg">
+        <h1>The <br>freedom <br>to create</h1>
+        <h2>Customize your long <br>body pillow with AI</h2>
+        <p>Don't miss out on the launch of our product! Enter your email address and we'll notify you as soon as it's ready.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScO3LBOAxIiU17NThZoErc37iQ3uqHFjiuZfHPkDscBAc_I5A/viewform?usp=sf_link" target="_blank"  class="button">Join Waitlist</a>
+    </div>
+    <div id="slider">
+        <img class="active" src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+        <img src="4.png">
+        <img src="5.png">
+        <img src="6.png">
+    </div>
+</div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#slider img');
+    const slideCount = slides.length;
+
+    setInterval(() => {
+        const nextSlide = (currentSlide + 1) % slideCount;
+        slides[currentSlide].classList.remove('active');
+        slides[nextSlide].classList.add('active');
+        currentSlide = nextSlide;
+    }, 8000);
+</script>
+</body>
+</html>
